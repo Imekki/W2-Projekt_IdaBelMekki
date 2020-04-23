@@ -1,0 +1,104 @@
+nav {
+    background-color: $color-prim;
+    //Låter "childer" använda content relaterat till flex
+    display: flex;
+    //Positionerar objekten med rum mellan varje
+    justify-content: space-between;
+    align-items: center;
+    //nav kan aldrig bli mindre än 8 % av viewport
+    min-height: 8vh;
+    
+    font-family: $font-prim;
+}
+
+.logo {
+    color: $color-light;
+    //Låter varje bokstav ta upp 3px
+    letter-spacing: 3px;
+    margin-left: 30px;
+}
+
+.nav-links {
+    //gör positionen till absolut, positionen är inte relaterad till viewport. 
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: $color-light-prim;
+    display: flex;
+    //Objekten har lika stor plats på båda sidorna av sig. Detta gör att alla mellanrum inte är lika.
+    justify-content: space-around;
+    //Ändrar riktningen från row till column, objekten är uppifrån och ner. 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    //Flyttar elementet sidleds med 100%
+    transform: translate(100%);
+    //Flytter element sidleds med en 0.5s delay. 
+    transition: transform .5s ease-in;
+}
+
+.nav-links li {
+    opacity: 1;
+    //Tar bort någon form av list style ex. punkter.
+    list-style: none;
+}
+
+.nav-links a {
+    color: $color-light;
+    //Tar bort ex. underline
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.burger {
+    //Startar på en ny rad och tar upp hela bredden. 
+    display: block;
+    //Byter muspekarens uteseende.  
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: $color-light;
+    margin: 5px;
+    margin-right: 30px;
+}
+
+.nav-active {
+    transform: translate(0);
+}
+
+//Animation
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        //Positionerar elementet horizontelt med 50px
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+//Skärmar större än 992px
+@media screen and (min-width: 992px) {
+    .burger {
+        display: none;
+    }
+
+    .nav-links {
+        transform: translate(0%);
+        height: 8vh;
+        background-color: $color-prim;
+        flex-direction: row;
+        width: 30%;
+        top: 0px;
+        margin-right: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
