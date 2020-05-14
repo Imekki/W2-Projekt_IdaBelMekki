@@ -1,0 +1,50 @@
+.kurs{
+    background-color: $color-light;
+    padding-top: 10px;
+    position: relative;
+    top: -70px;
+}
+
+.info {
+    padding-top: 20px;
+    margin: 10px 30px;
+    background-color: $color-sec;
+    box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.411);
+}
+
+.info img {
+    height: 400px;
+    width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.info h3 {
+    padding-bottom: 20px;
+    color: $color-light;
+    font-size: 28px;
+    text-align: center;
+}
+
+.info p{
+    color: $color-light;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 50px 10px 50px;
+    line-height: 30px;
+}
+
+.info a {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(241, 255, 116);
+}
+
+.kurs2 {
+    background-color: $color-light;
+    
+    padding-top: 30px;
+}

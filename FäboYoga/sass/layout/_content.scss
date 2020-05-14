@@ -1,0 +1,39 @@
+.content {
+    font-family: $font-prim;
+    position: relative;
+    top: -70px;
+    background-color: $color-sec;
+}
+
+.content h2{
+    padding-top: 20px;
+    font-size: 32px;
+    text-align: center;
+    color: $color-light;
+}
+
+.content p {
+    text-align: center;
+    line-height: 30px;
+    padding: 10px 30px 30px 30px;
+    font-size: 18px;
+    color: $color-light;
+}
+
+.quote img {
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.quote p {
+    color: $color-sec;
+    font-size: 18px;
+}
+
+.quote {
+    background-color: $color-light;
+    padding-top: 30px;
+
+}
